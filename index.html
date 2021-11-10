@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        //   var mydiv=document.createElement('div')
+        //   mydiv.innerText="hi i am gandhi"
+        //   document.body.appendChild(mydiv)
+
+        // var ul=document.createElement("ul")
+
+        // var li1=document.createElement("li")
+        // li1.innerText='gandhiraj'
+        // ul.appendChild(li1)
+
+        // var li2=document.createElement("li")
+        // li2.innerText='gandhiraj'
+        // ul.appendChild(li2)
+
+        // document.body.appendChild(ul)
+
+        // for loop
+
+        // var ul=document.createElement("ul")
+        // for(var i=0; i<10; i++)
+        // {
+        //     var li=document.createElement("li")
+        //     li.innerText=i
+        //     ul.appendChild(li)
+
+        // }
+        // document.body.appendChild(ul)
+
+        // for (var i = 0; i <= 100; i++) {
+        //     var value = document.createElement("div")
+
+        //     value.style.width = Math.random() * 50 + "px";
+        //     value.style.height = Math.random() * 50 + "px";
+        //     value.style.marginTop = "5px"
+
+        //     var r = Math.random() * 255
+        //     var g = Math.random() * 255
+        //     var b = Math.random() * 255
+
+        //     value.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        //     value.style.position = "absolute"
+        //     value.style.left = Math.random() * 800 + "px"
+        //     value.style.top = Math.random() * 800 + "px"
+
+        //     value.addEventListener('click', function () {
+        //         alert("hi gandhi")
+        //     }) -->
+
+
+        //     document.body.appendChild(value);
+        // }
+          <!-- </script> -->
+        <script>
+        var current="X";
+        var board=document.createElement('div');
+        board.style.width="300px"
+        board.style.height="300px"
+        board.style.display="flex"
+        board.style.flexDirection="row"
+        board.style.flexWrap="wrap"
+        board.style.paddingTop="150px"
+        board.style.paddingLeft="500px"
+
+        for(index=1; index<=9; index++){
+            var box=document.createElement('div')
+            box.style.width="98px"
+            box.style.height="98px"
+            box.style.border="1px solid yellow"
+            box.style.backgroundColor="green"
+            box.setAttribute("id",index)
+            box.style.textAlign="center"
+            box.style.fontSize="90px"
+            box.style.color="yellow"
+            box.addEventListener('click',function(){
+               if(this.innerText == 0){
+                if(current == "X")
+                {
+                    this.innerText=current;
+                    current="O"
+                }
+                else{
+                    this.innerText=current;
+                    current="X"
+                }
+               }
+               
+            })
+            board.appendChild(box)
+        }
+
+        document.body.appendChild(board);
+    </script>
+
+  
+</body>
+
+</html>
